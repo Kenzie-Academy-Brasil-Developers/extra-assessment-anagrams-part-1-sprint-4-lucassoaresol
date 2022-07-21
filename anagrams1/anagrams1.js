@@ -4,11 +4,12 @@ function alphabetize(a) {
 
 const button = document.getElementById("findButton")
     button.addEventListener("click", function () {
+        document.querySelector('.anagramas').innerHTML = '' 
         let anagramas = []
         let typedText = document.getElementById("input").value
         anagramas = getAnagramsOf(typedText)
         for (let i=0;i<anagramas.length;i++){
-            document.body.appendChild(criarH2(anagramas[i]))
+            document.querySelector('.anagramas').appendChild(criarH2(anagramas[i]))
         }
 });
 
